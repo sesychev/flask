@@ -34,4 +34,9 @@ def projects():
 @app.route('/skills')
 def skills():
     return render_template('skills.html')
+
+
+@app.route('/publications')
+def publications():
+    return render_template('publications.html')
                          

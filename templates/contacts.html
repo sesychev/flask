@@ -1,1 +1,29 @@
 {% extends 'base.html' %}
+
+{% block content %}
+<aside class="aside">
+    <div id="contacts" class="contacts">
+        <h2 class="heading">CONTACTS</h2>
+        <ul class="text-dark">
+            <li>
+                <a href="mailto:sergeysychou@gmail.com" target="_blank"><img class="icon" src="/images/gmail.svg" alt="icon-email"></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/sergey-sychev-5742a3bb/" target="_blank">
+                    <img class="icon" src="/images/in.svg" alt="icon-linkedin">
+                </a>
+            </li>
+            <li>
+                <a href="https://orcid.org/0000-0001-8213-7374" target="_blank">
+                    <img class="icon" src="/images/orcid.svg" alt="icon-orcid">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/sesychev" target="_blank">
+                    <img class="icon" src="/images/github.svg" alt="icon-github">
+                </a>
+            </li>
+        </ul>
+    </div>
+</aside>
+{% endblock %}
