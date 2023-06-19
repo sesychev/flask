@@ -10,6 +10,15 @@ wall = ifc.by_type('IfcBeam')[0]
 print(wall.is_a())
 print(wall.get_info())
 #https://wiki.osarch.org/index.php?title=IfcOpenShell_code_examples
+#https://linjiarui.net/en/posts/2020-06-15-opensource-bim-tools
+#https://trimsh.org/examples.html#quick-start-ipynb
+#https://github.com/ifcjs/
+#https://github.com/stefkeB/ifcopenshell_examples/tree/main/3D
+#https://github.com/stefkeB/ifcopenshell_examples/blob/main/3D/qt3d_minimal.py
+#https://github.com/R-Rijnbeek/IFC_WebViewer/tree/master
+#https://github.com/AECgeeks/ifc-pipeline/tree/master
+#
+
 
 app = Flask(__name__)
 
