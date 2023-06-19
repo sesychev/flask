@@ -1,4 +1,15 @@
 from flask import Flask, render_template
+import ifcopenshell
+import ifcopenshell.util
+import ifcopenshell.util.element
+#from ifc_viewer import ifc_viewer
+
+ifc = ifcopenshell.open('static/ifc/____P0-02-070.ifc')
+
+wall = ifc.by_type('IfcBeam')[0]
+print(wall.is_a())
+print(wall.get_info())
+#https://wiki.osarch.org/index.php?title=IfcOpenShell_code_examples
 
 app = Flask(__name__)
 
@@ -35,8 +46,14 @@ def projects():
 def skills():
     return render_template('skills.html')
 
-
 @app.route('/publications')
 def publications():
     return render_template('publications.html')
-                         
+
+@app.route('/ifc')
+def ifc():
+    return render_template('ifc.html')
+
+
+if __name__ == "__main__":
+    pass                    

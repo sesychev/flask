@@ -1,0 +1,1 @@
+install_ifcopenshell_python

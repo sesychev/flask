@@ -14,49 +14,51 @@
     <title>{% block title %} {% endblock %}</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="{{ url_for('index')}}">SE</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link text-dark" asp-area="" asp-page="/Index" href="{{ url_for('about') }}">ABOUT</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="/Index" href="{{ url_for('experience') }}">EXPERIENCE</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="/Index" href="{{ url_for('education') }}">EDUCATION</a>
-            </li>
-            <li class="nav-item aw">
-                <a class="nav-link text-dark" asp-area="" asp-page="/Index" href="{{ url_for('awards') }}">AWARDS</a>
-            </li>
-            <li class="nav-item sk">
-                <a class="nav-link text-dark" asp-area="" asp-page="/Index" href="{{ url_for('skills') }}">SKILLS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="/Index" href="{{ url_for('projects') }}">PROJECTS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="/Index" href="{{ url_for('publications') }}">PUBLICATIONS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-page="/Index" href="{{ url_for('contacts') }}">CONTACTS</a>
-            </li>
-            </ul>
+    <div class="">
+    <header class="header container">
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="{{ url_for('index')}}">SE</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Index" href="{{ url_for('about') }}">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Index" href="{{ url_for('experience') }}">EXPERIENCE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Index" href="{{ url_for('education') }}">EDUCATION</a>
+                </li>
+                <li class="nav-item aw">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Index" href="{{ url_for('awards') }}">AWARDS</a>
+                </li>
+                <li class="nav-item sk">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Index" href="{{ url_for('skills') }}">SKILLS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Index" href="{{ url_for('projects') }}">PROJECTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Index" href="{{ url_for('publications') }}">PUBLICATIONS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Index" href="{{ url_for('contacts') }}">CONTACTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Index" href="{{ url_for('ifc') }}">ifc</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+    </header>  
+    
+    <div class="">
+        <div class="container">
+            {% block content %} {% endblock %}
         </div>
-
-        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-            <ul class="navbar-nav flex-grow-1">
-                
-            </ul>
-        </div>
-
-    </nav>
-    <div class="container">
-        {% block content %} {% endblock %}
     </div>
 
     <footer class="footer bg-white border-top text-muted">
@@ -66,11 +68,12 @@
             </li>
         </ul>
     </footer>
-    
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </div>  
   </body>
 </html>
