@@ -2,4 +2,14 @@
 
 {% block content %}
     <h1>{% block title %} Welcome to {{ url_for('about')}} {% endblock %}</h1>
+    <div id="about" class="about">
+        <div class="photo"><img src="{{ url_for('static', filename='images/IMG_7201.jpg') }}" alt="me"></div>
+        <div class="about-text">
+            <h1 class="heading">SERGEY SYCHEV</h1>
+            <div class="subheading">
+                My initial education was related to Manufacturing Engineering, as well as the machining and cutting tools design. Then after graduating from the University, I was enrolled in a Master's degree program in the field of machining. In the following, I enrolled in a part-time course at
+                the faculty of Applied Mathematics and Computer Science. For some years having been engaged in the implementation of information technologies (BIM) in construction (AEC) I am looking for aportunity to get into IT in order to combine my previous experience in engineering and computer skills and knowledge.
+            </div>
+        </div>
+    </div>
 {% endblock %}
