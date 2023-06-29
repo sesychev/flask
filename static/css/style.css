@@ -32,7 +32,7 @@ h1:focus {
     }
 /*razor*/
 html {
-    font-size: 14px;
+    font-size: 15px;
 }
 /*
     @media (min-width: 768px) {
@@ -48,11 +48,11 @@ html {
 
 html {
     position: relative;
-    min-height: 100%;
 }
 
 body {
-    margin-bottom: 60px;
+    /*height: 100vh;*/
+    /*margin-bottom: 60px;*/
 }
 
 *,
@@ -91,24 +91,41 @@ ol, ul {
     color: black;
 }
 
+.base {
+    display: grid;
+    grid-template-areas:
+    "head"
+    "main"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+.center {
+    min-height: 100vh;
+}
+
 .grid {
-    max-width: 1280px;
-    padding: 0 20px 20px 20px;
+    /*padding: 0 20px 20px 20px;*/
+    max-width: 1024px;
+
     width: 100%;
     margin: auto;
     display: grid;
     grid-template-areas:
         "main aside";
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
     font-family: 'AvantGarde';
-    font-weight: 400;
+    font-weight: 500;
     font-size: 15px;
     line-height: 160%;
 }
 
 /*Main*/
 .main {
+    min-height: 100vh;
+
     grid-area: main;
     display: grid;
     grid-template-areas:
@@ -226,16 +243,18 @@ ol, ul {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     align-content: start;
-    padding: 0 20px;
+    /*padding: 0 20px;*/
     border-radius: 10px;
     background-color: gray;
     background-color: #FFFDD0;
+
+    margin-bottom: 20px;
 }
 
 .skills,
 .languages,
 .courses {
-    margin-bottom: 55px;
+    /*margin-bottom: 55px;*/
 }
 
 .contacts {
@@ -304,7 +323,7 @@ ol, ul {
 }
 
 .interests {
-    display: none;
+    /*display: none;*/
     grid-area: interest;
     background-color: dimgrey;
     border-radius: 0 0 10px 10px;
@@ -340,9 +359,9 @@ ol, ul {
 .footer {
     grid-area: footer;
     display: grid;
-    grid-template-columns: max-content 1.5fr 1fr;
+    /*grid-template-columns: max-content 1.5fr 1fr;*/
     grid-template-rows: max-content;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .icons {
@@ -364,6 +383,11 @@ ol, ul {
     height: 44px;
 }
 
+.position-year {
+    display: flex;
+    justify-content: space-between;
+}
+
 .position {
     /*hor*/
     justify-self: center;
@@ -377,6 +401,8 @@ color: #004f49;
     width: max-content;
     */
     font-stretch: ultra-condensed;
+    padding-top: 1em;
+    /*margin-top: 10px;*/
 }
 
 .company {
@@ -384,8 +410,8 @@ color: #004f49;
     justify-self: center;
     /*ver*/
     align-self: center;
-    font-weight: 700;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 18px;
     line-height: 160%;
     /*
     color: #004f49;
@@ -398,9 +424,8 @@ color: #004f49;
     /*hor*/
     justify-self: center;
     /*ver*/
-    align-self: center;
-    font-weight: 700;
-    font-size: 14px;
+    font-weight: 500;
+    font-size: 18px;
     line-height: 160%;
     /*
 color: #004f49;

@@ -1,18 +1,180 @@
-{% extends 'base.html' %}
-
-{% block content %}
-<div class="grid">
-<main class="main">
-    <div id="about" class="about">
-        <div class="photo"><img src="{{ url_for('static', filename='images/IMG_7201.jpg') }}" alt="me"></div>
-        <div class="about-text">
-            <h1 class="heading">SERGEY SYCHEV</h1>
-            <div class="subheading">
-                My initial education was related to Manufacturing Engineering, as well as the machining and cutting tools design. Then after graduating from the University, I was enrolled in a Master's degree program in the field of machining. In the following, I enrolled in a part-time course at
-                the faculty of Applied Mathematics and Computer Science. For some years having been engaged in the implementation of information technologies (BIM) in construction (AEC) I am looking for aportunity to get into IT in order to combine my previous experience in engineering and computer skills and knowledge.
-            </div>
-        </div>
+{% extends 'base.html' %} {% block content %}
+<!--
+<div id="about" class="about">
+  <div class="photo">
+    <img
+      src="{{ url_for('static', filename='images/IMG_7201.jpg') }}"
+      alt="me"
+    />
+  </div>
+  <div class="about-text">
+    <h1 class="heading">SERGEY SYCHEV</h1>
+    <div class="subheading">
+      My initial education was related to Manufacturing Engineering, as well as
+      the machining and cutting tools design. Then after graduating from the
+      University, I was enrolled in a Master's degree program in the field of
+      machining. In the following, I enrolled in a part-time course at the
+      faculty of Applied Mathematics and Computer Science. For some years having
+      been engaged in the implementation of information technologies (BIM) in
+      construction (AEC) I am looking for aportunity to get into IT in order to
+      combine my previous experience in engineering and computer skills and
+      knowledge.
     </div>
-</main>
+  </div>
+</div>
+-->
+
+<div id="education" class="education">
+  <h2 class="heading">EDUCATION</h2>
+  <div class="education-content">
+    <div class="position">Pre-Doctoral program</div>
+    <div class="position-year">
+      <a href="https://www.uc.pt/cemmpre/" target="_blank">
+        <div class="company">
+          Centre for Mechanical Engineering, Materials and Processes, Comibra,
+          Portugal
+        </div>
+      </a>
+      <div class="year">Jan. 2021 – Aug. 2021</div>
+    </div>
+
+    <div class="position">Mathematician-programmer</div>
+    <div class="position-year">
+      <a
+        href="https://bsu.by/en/structure/faculties/kafedry/faculty-of-advanced-training-and-retraining-d"
+        target="_blank"
+      >
+        <div class="company">
+          Belarusian State University, Faculty of advanced training and
+          retraining, Minsk, Belarus
+        </div>
+      </a>
+      <div class="year">Oct. 2008 – June 2009</div>
+    </div>
+
+    <div class="position">Master in Manufacturing Technology</div>
+    <div class="position-year">
+      <a href="https://www.psu.by/en/" target="_blank">
+        <div class="company">
+          Polotsk State University, Novopolotsk, Belarus
+        </div>
+      </a>
+      <div class="year">Oct. 2004 – June 2005</div>
+    </div>
+
+    <div class="position">Master in Manufacturing Engineering</div>
+    <div class="position-year">
+      <a href="http://en.bru.by/" target="_blank">
+        <div class="company">
+          Belarusian-Russian University, Mogilev, Belarus
+        </div>
+      </a>
+      <div class="year">Sept. 1999 – June 2004</div>
+    </div>
+
+    <div class="position">
+      Diploma of Specialized Secondary Education in Electrical Engineering
+    </div>
+    <div class="position-year">
+      <a href="https://ogkjt.bsut.by/#" target="_blank">
+        <div class="company">
+          Orsha State College of Railway Transport, Belarus
+        </div>
+      </a>
+      <div class="year">Sept. 1995 – June 1999</div>
+    </div>
+  </div>
+</div>
+
+<div id="awards" class="awards">
+  <h2 class="heading">AWARDS</h2>
+  <div class="content">
+    Awarded the first prize in Republican contest of students' scientific works
+    of higher education institutions of the Republic of Belarus for the
+    scientific research paper 'Finite Element modelling of orthogonal metal
+    cutting process by the tool with anti-wear coating', 2005
+  </div>
+</div>
+<div id="grants" class="grants">
+  <h2 class="heading">GRANTS</h2>
+  <div class="content">
+    <strong>Title:</strong> 'Synthesis of ceramic composite coatings on metals
+    with increased strength and anticorrosion properties by micro-arc
+    oxidation'<br /><strong> Project number: </strong> 18-73-00025
+  </div>
+  <div class="content">
+    <strong>Title:</strong> 'Experimental and theoretical study of nonlinear
+    dynamic effects of cluster formation during surface and subsurface
+    destruction in tribological systems at nano- and meso-scale levels'<br /><strong
+      >Project number:</strong
+    >
+    10-08-00966
+  </div>
+</div>
+<aside class="aside">
+  <div id="languages" class="languages">
+    <h2 class="heading">LANGUAGES</h2>
+    <ul class="ul-languages">
+      <li>Belarusian and Russian – Native/Bilingual</li>
+      <li>English – Upper intermediate (IELTS 6.0/B2)</li>
+      <li>Portuguese – Elementary (CEFR A2)</li>
+    </ul>
+  </div>
+  <div id="courses" class="courses">
+    <h2 class="heading">COURSES</h2>
+    <ul class="ul-courses">
+      <li>
+        <a class="active" href="https://app.rs.school/certificate/kfsdtobu"
+          ><strong>NodeJS 2022Q4 (RS School Certificate)</strong></a
+        >
+      </li>
+      <li>
+        <a class="active" href="https://app.rs.school/certificate/xo22bf92"
+          ><strong
+            >JS/Frontend - Pre-School 2022Q2 (RS School Certificate)</strong
+          ></a
+        >
+      </li>
+      <li>Python Core Development - EPAM (2023)</li>
+      <li>.NET Development - EPAM (2022/KZ)</li>
+      <li>.NET Development - EPAM (2021Q4/BY/2)</li>
+      <li>.NET Development - EPAM (2021Q4/BY/1)</li>
+    </ul>
+  </div>
+  <div id="interests" class="interests">
+    <h2 class="heading">RESEARCH INTERESTS</h2>
+    <ul class="ul-iterests">
+      <li>Acoustic Emission (AE)</li>
+      <li>Artificial Intelligence</li>
+      <li>Data Analysis/Science</li>
+      <li>Digital signal processing (DSP)</li>
+      <li>Digital Twins</li>
+      <li>Finite Element Analysis (FEA)</li>
+      <li>Industrial Internet of Things (IIoT)</li>
+      <li>Industry 4.0/5.0</li>
+      <li>Machine Learning</li>
+    </ul>
+  </div>
+</aside>
+<div id="certifications" class="certifications">
+  <h2 class="heading">CERTIFICATIONS</h2>
+  <ol class="subheading">
+    <li>
+      <a
+        class="active"
+        href="https://ielts.ucles.org.uk/ielts-trf/welcome.html"
+      >
+        <strong>
+          International English Language Testing System (IELTS), British
+          Council, 2021
+        </strong>
+      </a>
+    </li>
+    <li lang="pt">
+      O nível А2 do curso de Português Língua de AcolhimentoO nível А2 do curso
+      de Português Língua de Acolhimento, Centro de Emprego е Formação
+      Profissional de Coimbra, 2021
+    </li>
+  </ol>
 </div>
 {% endblock %}

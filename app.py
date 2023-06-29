@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 import ifcopenshell
+import ifcopenshell.geom
 import ifcopenshell.util
 import ifcopenshell.util.element
 #from ifc_viewer import ifc_viewer
@@ -17,8 +18,7 @@ print(wall.get_info())
 #https://github.com/stefkeB/ifcopenshell_examples/blob/main/3D/qt3d_minimal.py
 #https://github.com/R-Rijnbeek/IFC_WebViewer/tree/master
 #https://github.com/AECgeeks/ifc-pipeline/tree/master
-#
-
+#https://blog.skillfactory.ru/kak-napisat-veb-prilozhenie-dlya-demonstratsii-data-science-proekta-na-python/
 
 app = Flask(__name__)
 
