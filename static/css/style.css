@@ -325,7 +325,7 @@ ol, ul {
 .interests {
     /*display: none;*/
     grid-area: interest;
-    background-color: dimgrey;
+    /*background-color: dimgrey;*/
     border-radius: 0 0 10px 10px;
     /*width: auto;*/
     /*background-color: #F5F5DC;*/
