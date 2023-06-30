@@ -141,6 +141,14 @@ ol, ul {
     align-content: start;
 }
 
+.info + .info {
+    padding-top: 1em;
+}
+
+.heading {
+    margin-bottom: 1.5rem;  
+}
+
 /*Home*/
 .home {
     /*height: 50vh;*/
@@ -192,7 +200,6 @@ ol, ul {
 
 .education {
     grid-area: education;
-    margin-bottom: 20px;
     /*
         background-color: #FFFDD0;
     */
@@ -212,7 +219,6 @@ ol, ul {
 
 .awards {
     grid-area: award;
-    margin-bottom: 20px;
     /*
     background-color: #FDEAA8;
     */
@@ -251,9 +257,17 @@ ol, ul {
     margin-bottom: 20px;
 }
 
-.skills,
+.aside + .aside {
+    margin-bottom: 20px;
+}
+
+.education,
+.awards,
+.courses,
 .languages,
-.courses {
+.certifications,
+.skills {
+    margin-bottom: 20px;
     /*margin-bottom: 55px;*/
 }
 
@@ -261,7 +275,7 @@ ol, ul {
     grid-area: contacts;
     border-radius: 10px;
     margin-top: 0px;
-    margin-bottom: 55px;
+    /*margin-bottom: 55px;*/
     /*background-color: #FFFDD0;*/
     /*background-color: rgb(236, 207, 168);*/
 }
@@ -401,7 +415,7 @@ color: #004f49;
     width: max-content;
     */
     font-stretch: ultra-condensed;
-    padding-top: 1em;
+    /*padding-top: 1em;*/
     /*margin-top: 10px;*/
 }
 
