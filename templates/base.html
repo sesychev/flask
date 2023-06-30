@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <title>CV</title>
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/iconmonstr-cv-4.svg') }}">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='images/iconmonstr-cv-4.svg') }}"
+    />
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -28,37 +32,38 @@
   </head>
   <body>
     <div class="">
-      <header class="header container">
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
-          <a class="navbar-brand" href="{{ url_for('index')}}">ABOUT</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a
-                  class="nav-link text-dark"
-                  href="{{ url_for('education') }}"
-                  >EDUCATION</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-dark"
-                  href="{{ url_for('experience') }}"
-                  >EXPERIENCE</a
-                >
-              </li>
-              <!--
+      <header class="header">
+        <div class="grid">
+          <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="{{ url_for('index')}}">ABOUT</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a
+                    class="nav-link text-dark"
+                    href="{{ url_for('education') }}"
+                    >EDUCATION</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-dark"
+                    href="{{ url_for('experience') }}"
+                    >EXPERIENCE</a
+                  >
+                </li>
+                <!--
               <li class="nav-item">
                 <a
                   class="nav-link text-dark"
@@ -67,7 +72,7 @@
                 >
               </li>
               -->
-              <!--
+                <!--
               <li class="nav-item aw">
                 <a
                   class="nav-link text-dark"
@@ -78,7 +83,8 @@
                 >
               </li>
               -->
-              <li class="nav-item sk">
+                <!--
+                <li class="nav-item sk">
                 <a
                   class="nav-link text-dark"
                   asp-area=""
@@ -87,7 +93,8 @@
                   >SKILLS</a
                 >
               </li>
-              <!--
+            -->
+                <!--
               <li class="nav-item">
                 <a
                   class="nav-link text-dark"
@@ -98,16 +105,16 @@
                 >
               </li>
               -->
-              <li class="nav-item">
-                <a
-                  class="nav-link text-dark"
-                  asp-area=""
-                  asp-page="/Index"
-                  href="{{ url_for('publications') }}"
-                  >PUBLICATIONS</a
-                >
-              </li>
-              <!--
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-dark"
+                    asp-area=""
+                    asp-page="/Index"
+                    href="{{ url_for('publications') }}"
+                    >PUBLICATIONS</a
+                  >
+                </li>
+                <!--
               <li class="nav-item">
                 <a
                   class="nav-link text-dark"
@@ -118,24 +125,25 @@
                 >
               </li>
               -->
-              <li class="nav-item">
-                <a
-                  class="nav-link text-dark"
-                  asp-area=""
-                  asp-page="/Index"
-                  href="{{ url_for('ifc') }}"
-                  >ifc</a
-                >
-              </li>
-            </ul>
-          </div>
-        </nav>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-dark"
+                    asp-area=""
+                    asp-page="/Index"
+                    href="{{ url_for('ifc') }}"
+                    >ifc</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
       </header>
 
       <div class="grid">
         <main class="main">
           <div class="">
-            <div class="container">{% block content %} {% endblock %}</div>
+            <div class="">{% block content %} {% endblock %}</div>
           </div>
         </main>
       </div>

@@ -83,6 +83,7 @@ ol, ul {
     position: sticky;
     top: 0;
     z-index: 1;
+    background-color: #f8f9fa!important;
 }
 
 .nav-link a {
@@ -106,7 +107,7 @@ ol, ul {
 }
 
 .grid {
-    /*padding: 0 20px 20px 20px;*/
+    padding: 0 20px 20px 20px;
     max-width: 1024px;
 
     width: 100%;
@@ -233,10 +234,19 @@ ol, ul {
     /*background-color: rgb(236, 207, 168);*/
 }
 
+.frame {
+    display: grid;
+    grid-template-areas:
+    "projects contacts"
+    "skills interest";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+}
 /*Main*/
 .aside {
     position: relative;
-    grid-area: aside;
+    
     display: grid;
     grid-template-areas:
         "contacts"
@@ -261,19 +271,28 @@ ol, ul {
     margin-bottom: 20px;
 }
 
+
+.contacts,
+.projects,
+.interests,
+.skills {
+    border-radius: 10px;
+    background-color: gray;
+    background-color: #FFFDD0;
+    padding: 0 0 0 20px;
+}
+
 .education,
 .awards,
 .courses,
 .languages,
-.certifications,
-.skills {
+.certifications {
     margin-bottom: 20px;
     /*margin-bottom: 55px;*/
 }
 
 .contacts {
     grid-area: contacts;
-    border-radius: 10px;
     margin-top: 0px;
     /*margin-bottom: 55px;*/
     /*background-color: #FFFDD0;*/
@@ -294,8 +313,7 @@ ol, ul {
 }
 
 .skills {
-    grid-area: skill;
-    border-radius: 10px 10px 0 0;
+    grid-area: skills;
     /*background-color: rgb(241, 189, 124);
     background-color: #D2B48C;*/
 }
@@ -325,7 +343,7 @@ ol, ul {
     /*width: auto;*/
     /*width: min-content;*/
     grid-area: projects;
-    border-radius: 0 0 10px 10px;
+    /*border-radius: 0 0 10px 10px;*/
     /*background-color: #F5F5DC;
     background-color: #CC99FE;
     background-color: #b39c65;
@@ -340,7 +358,7 @@ ol, ul {
     /*display: none;*/
     grid-area: interest;
     /*background-color: dimgrey;*/
-    border-radius: 0 0 10px 10px;
+    /*border-radius: 0 0 10px 10px;*/
     /*width: auto;*/
     /*background-color: #F5F5DC;*/
     /*background-color: rgba(245, 238, 225);*/
@@ -521,13 +539,13 @@ color: #004f49;
     }
 
     .contacts ul {
-        display: flex;
-        justify-content: space-between;
+        /*display: flex;
+        justify-content: space-between;*/
     }
 
     .contacts ul,
     .contacts li {
-        margin-bottom: 0;
+        /*margin-bottom: 0;*/
     }
 
     .aside {
@@ -536,7 +554,7 @@ color: #004f49;
         background-color: transparent;
         grid-template-areas:
             "block"
-            "skill"
+            "skills"
             "language"
             "course"
             "projects"
@@ -556,6 +574,16 @@ color: #004f49;
 
     .heading {
         font-weight: 700;
+    }
+
+    .frame {
+        grid-template-areas:
+        "projects"
+        "contacts"
+        "skills"
+        "interest";
+
+        grid-template-columns: 1fr;
     }
 }
 
