@@ -91,6 +91,7 @@ ol, ul {
 .navbar {
     margin: auto;
     max-width: 1024px;
+    padding: 0 20px;
 }
 
 .nav-link a {
