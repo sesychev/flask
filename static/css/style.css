@@ -83,7 +83,14 @@ ol, ul {
     position: sticky;
     top: 0;
     z-index: 1;
-    background-color: #f8f9fa!important;
+    /*background-color: #f8f9fa!important;*/
+    background: rgb(216, 167, 29, 0.75);
+    background-color: rgb(255, 253, 208, 0.75);
+}
+
+.navbar {
+    margin: auto;
+    max-width: 1024px;
 }
 
 .nav-link a {

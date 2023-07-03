@@ -56,6 +56,9 @@ def experience():
 def publications():
     return render_template('publications.html', data=data_publications)
 
+@app.route('/ifc')
+def ifc():
+    return render_template('ifc.html')
 
 #@app.route('/about')
 #def about():
@@ -77,9 +80,7 @@ def projects():
 def skills():
     return render_template('skills.html')
 
-@app.route('/ifc')
-def ifc():
-    return render_template('ifc.html')
+
 
 
 if __name__ == "__main__":
