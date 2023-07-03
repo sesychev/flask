@@ -24,22 +24,29 @@ wall = ifc.by_type('IfcBeam')[0]
 app = Flask(__name__)
 
 # static/data/test_data.json
+education = os.path.join(app.static_folder, 'data', 'education.json')
+experience = os.path.join(app.static_folder, 'data', 'experience.json')
 publications = os.path.join(app.static_folder, 'data', 'publications.json')
 
-experience = os.path.join(app.static_folder, 'data', 'experience.json')
-
+with open(education) as education_file:
+    data_education = json.load(education_file)
+    
+with open(experience) as experience_file:
+    data_experience = json.load(experience_file)
+    
 with open(publications) as publications_file:
     data_publications = json.load(publications_file)
 
-with open(experience) as experience_file:
-    data_experience = json.load(experience_file)
 #print(data)
-
 
 @app.route('/')
 @app.route('/index')
 def index():
     return render_template('index.html')
+
+@app.route('/education')
+def education():
+    return render_template('education.html', data=data_education)
 
 @app.route('/experience')
 def experience():
@@ -61,11 +68,6 @@ def awards():
 @app.route('/contacts')
 def contacts():
     return render_template('contacts.html')
-
-@app.route('/education')
-def education():
-    return render_template('education.html')
-
 
 @app.route('/projects')
 def projects():

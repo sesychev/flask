@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "position": "Pre-Doctoral program",
+        "years": "Jan. 2021 - Aug. 2021",
+        "company": "Centre for Mechanical Engineering, Materials and Processes, Comibra, Portugal",
+        "link": "https://english.spbstu.ru/"
+    },
+    {
+        "id": 2,
+        "position": "Mathematician-programmer",
+        "years": "Oct. 2008 - June 2009",
+        "company": "Belarusian State University, Faculty of advanced training and retraining, Minsk, Belarus",
+        "link": "https://bsu.by/en/structure/faculties/kafedry/faculty-of-advanced-training-and-retraining-d"
+    }
+    ,
+    {
+        "id": 3,
+        "position": "Master in Manufacturing Technology",
+        "years": "Oct. 2004 - June 2005",
+        "company": "Polotsk State University, Novopolotsk, Belarus",
+        "link": "https://english.spbstu.ru/"
+    },
+    {
+        "id": 4,
+        "position": "Master in Manufacturing Engineering",
+        "years": "Sept. 1999 - June 2004",
+        "company": "Belarusian-Russian University, Mogilev, Belarus",
+        "link": "http://en.bru.by/"
+    }
+    ,
+    {
+        "id": 5,
+        "position": "Diploma of Specialized Secondary Education in Electrical Engineering",
+        "years": "Sept. 1995 - June 1999",
+        "company": "Orsha State College of Railway Transport, Orsha, Belarus",
+        "link": "https://ogkjt.bsut.by/"
+    }
+]
