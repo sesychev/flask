@@ -1,0 +1,80 @@
+[
+    {
+      "id": 1,
+      "title": "Oscillatory Processes under Friction in Materials and Coatings Based on Aluminum.",
+      "authors": "Markov M.A., Fadin Y.A. Sychev S.V. et al.",
+      "journal": "Journal of Friction and Wear. 40, 146 - 150 (2019).",
+      "link": "DOI: https://doi.org/10.3103/S1068366619020089"
+    },
+    {
+      "id": 2,
+      "title": "Time-frequency analysis of Acoustic Emission signals recorded during friction using Wavelet Transform.",
+      "authors": "Sychev S.V., Fadin Yu.А., Breki A.D. et al.",
+      "journal": "Proceedings of the Southwest State University. Series: Engineering and Technologies. Vol. 7, 4(25), 49 - 59 (2017) [in Russian].",
+      "link": "https://swsu.ru/izvestiya/seriestechniq/archiv/4_2017.pdf"
+    },
+    {
+      "id": 3,
+      "title": "Application of wavelet energy and Shannon entropy for mother wavelet selection.",
+      "authors": "Sychev S.V., Fadin Yu.A., Breki A.D. et al.",
+      "journal": "News of the Tula state university. Technical sciences. 7, 33 - 41 (2017) [in Russian].",
+      "link": "https://tidings.tsu.tula.ru/tidings/pdf/web/preview_therest_ru.php?x=tsu_izv_technical_sciences_2017_007&year=2017"
+    },
+    {
+      "id": 4,
+      "title": "Acoustic emission and surface roughness of brittle materials.",
+      "authors": "Fadin Y.A., Kireenko O.F., Sychev S.V. et al.",
+      "journal": "Tech. Phys. Lett. 40, 1089 - 1091 (2014).",
+      "link": "DOI: https://doi.org/10.1134/S1063785014120232"
+    },
+    {
+      "id": 5,
+      "title": "Formation of surface relief under friction.",
+      "authors": "Sychev S.V., Fadin Yu.А.",
+      "journal": "Journal of Instrument Engineering (Izvestiya vysshikh uchebnykh zavedeniy. Priborostroenie). Vol. 55(6), 30 - 33 (2012) [in Russian].",
+      "link": "http://pribor.ifmo.ru/file/article/5922.pdf"
+    },
+    {
+      "id": 6,
+      "title": "Investigation of the surface running-in process for wear resistant ceramics.",
+      "authors": "Sychev S.V., Kuznetsova O.S, Fadin Yu.A., Chulkin S.G.",
+      "journal": "St. Petersburg State Polytechnic University Journal of Engineering Science and Technology. 154(3), 185 - 188 (2012) [in Russian].",
+      "link": "https://engtech.spbstu.ru/userfiles/files/volume/sce_2012_3_2.pdf"
+    },
+    {
+      "id": 7,
+      "title": "The applying of acoustic emission in study of brittle material’s wear.",
+      "authors": "Kuznetsova O.S., Sychev S.V., Fadin Yu.A., Chulkin S.G.",
+      "journal": "St. Petersburg State Polytechnic University Journal of Engineering Science and Technology. Vol. 154(3), 174 - 177 (2012) [in Russian].",
+      "link": "https://engtech.spbstu.ru/userfiles/files/volume/sce_2012_3_2.pdf"
+    },
+    {
+      "id": 8,
+      "title": "The initial stage of friction contact between brittle bodies.",
+      "authors": "Fadin Yu.A., Kireenko O.F., Kuznetsova O.S., Sychev S.V.",
+      "journal": "Journal of Friction and Wear. 32, 227 - 229 (2011).",
+      "link": "DOI: https://doi.org/10.3103/S1068366611030032"
+    },
+    {
+      "id": 9,
+      "title": "Finite element modeling of the cutting process with a tool with a wear-resistant coating.",
+      "authors": "Kheifetz M.L., and Sychev S.V.",
+      "journal": "Vestnik komp'iuternykh i informatsionnykh tekhnologii (Herald of computer and information technologies). 5, 11 - 17 (2007) [in Russian].",
+      "link": ""
+    },
+    {
+      "id": 10,
+      "title": "Modelling the mechanics and thermophysics of the cutting process with a tool with a wear-resistant coating by the finite element method.",
+      "authors": "Beliy A.V., Kheifetz M.L., and Sychev S.V.",
+      "journal": "Herald of Polotsk State University, Series C, Fundamental Sciences. 10, 1 - 9 (2005) [in Russian].",
+      "link": "http://elib.psu.by:8080/bitstream/123456789/27502/1/%d0%91%d0%b5%d0%bb%d1%8b%d0%b9_2005_10.pdf"
+    },
+    {
+      "id": 11,
+      "title": "Wearing and fracture of TiN-coated HSS tools.",
+      "authors": "Kheifets M.L., Minevich A.A., and Sychev S.V.",
+      "journal": "The Journal of Superhard Materials. 5, 79 - 84 (2005) [in Russian].",
+      "link": ""
+    }
+  ]
+  
