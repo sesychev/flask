@@ -1,8 +1,32 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% block title %}EXPERIENCE{% endblock title %}
+{% block header %}WORK EXPERIENCE{% endblock header %}
+{% block content %}
 <div id="experience" class="experience">
-  <h2 class="heading">WORK EXPERIENCE</h2>
   <div class="experience-content">
+
+    {% for item in data %}
     <div class="info">
+      <a href="{{ item.link }}" target="_blank">
+      <div class="position">{{ item.position }}</div>
+      </a>
+      <div class="position-year">
+        <strong class="company">{{ item.company }}<br/></strong>
+        <div class="year">{{ item.years }}</div>
+      </div>
+      <div class="subheading">
+        <div>{{ item.job }}</div>
+      </div>
+    </div>
+  {% endfor %} 
+
+  </div>
+</div>
+{% endblock %}
+
+
+    <!--
+<div class="info">
       <a href="https://gle.ru/eng/" target="_blank">
       <div class="position">Chief Specialist</div>
       </a>
@@ -180,6 +204,5 @@
         <div>TBD</div>
       </div>
     </div>
-  </div>
-</div>
-{% endblock %}
+    -->
+    

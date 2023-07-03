@@ -1,5 +1,28 @@
-﻿{% extends 'base.html' %}
+﻿{% extends 'base.html' %} 
+{% block title %}PUBLICATIONS{% endblock title %} 
+{% block header %}PUBLICATIONS{% endblock header %}
 
-{% block content %}
+{% block content %} 
 
-{% endblock %}
+{% for item in data %}
+<div class="info">
+  <div class="subheading">
+    <div>
+      <span>{{ item.id }}.</span>
+      <span> {{ item.title }} </span>
+      <span>{{ item.authors }}</span>
+      <span> {{ item.journal }}</span>
+      <div class="">
+        {% if 'DOI:' in item.link %}
+            <span>{{ item.link.split(' ')[0] }}</span>
+            <strong><a href="{{ item.link.split(' ')[1] }}" target="_blank">{{ item.link.split(' ')[1] }}</a></strong>
+        {% else %}
+            <strong><a href="{{ item.link }}" target="_blank">{{ item.link }}</a></strong>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %} 
+
+{% endblock content %}

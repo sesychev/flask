@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>CV</title>
     <link
       rel="icon"
       type="image/x-icon"
@@ -28,10 +27,12 @@
       rel="stylesheet"
     />
 
-    <title>{% block title %} {% endblock %}</title>
+    <title>{% block title %}CV{% endblock %}</title>
   </head>
   <body>
+
     <div class="">
+     
       <header class="header">
         <div class="grid">
           <nav class="navbar navbar-expand-md navbar-light bg-light">
@@ -143,7 +144,8 @@
       <div class="grid">
         <main class="main">
           <div class="">
-            <div class="">{% block content %} {% endblock %}</div>
+            <h2 class="heading">{% block header %}{% endblock header %}</h2>
+            <div>{% block content %}{% endblock content %}</div>
           </div>
         </main>
       </div>

@@ -1,15 +1,16 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, json, current_app
 import ifcopenshell
 import ifcopenshell.geom
 import ifcopenshell.util
 import ifcopenshell.util.element
+import os
 #from ifc_viewer import ifc_viewer
 
 ifc = ifcopenshell.open('static/ifc/____P0-02-070.ifc')
 
 wall = ifc.by_type('IfcBeam')[0]
-print(wall.is_a())
-print(wall.get_info())
+#print(wall.is_a())
+#print(wall.get_info())
 #https://wiki.osarch.org/index.php?title=IfcOpenShell_code_examples
 #https://linjiarui.net/en/posts/2020-06-15-opensource-bim-tools
 #https://trimsh.org/examples.html#quick-start-ipynb
@@ -22,10 +23,31 @@ print(wall.get_info())
 
 app = Flask(__name__)
 
+# static/data/test_data.json
+publications = os.path.join(app.static_folder, 'data', 'publications.json')
+
+experience = os.path.join(app.static_folder, 'data', 'experience.json')
+
+with open(publications) as publications_file:
+    data_publications = json.load(publications_file)
+
+with open(experience) as experience_file:
+    data_experience = json.load(experience_file)
+#print(data)
+
+
 @app.route('/')
 @app.route('/index')
 def index():
     return render_template('index.html')
+
+@app.route('/experience')
+def experience():
+    return render_template('experience.html', data=data_experience)
+
+@app.route('/publications')
+def publications():
+    return render_template('publications.html', data=data_publications)
 
 
 #@app.route('/about')
@@ -44,9 +66,6 @@ def contacts():
 def education():
     return render_template('education.html')
 
-@app.route('/experience')
-def experience():
-    return render_template('experience.html')
 
 @app.route('/projects')
 def projects():
@@ -55,10 +74,6 @@ def projects():
 @app.route('/skills')
 def skills():
     return render_template('skills.html')
-
-@app.route('/publications')
-def publications():
-    return render_template('publications.html')
 
 @app.route('/ifc')
 def ifc():

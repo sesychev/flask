@@ -1,32 +1,11 @@
-{% extends 'base.html' %} {% block content %}
-<!--
-<div id="about" class="about">
-  <div class="photo">
-    <img
-      src="{{ url_for('static', filename='images/IMG_7201.jpg') }}"
-      alt="me"
-    />
-  </div>
-  <div class="about-text">
-    <h1 class="heading">SERGEY SYCHEV</h1>
-    <div class="subheading">
-      My initial education was related to Manufacturing Engineering, as well as
-      the machining and cutting tools design. Then after graduating from the
-      University, I was enrolled in a Master's degree program in the field of
-      machining. In the following, I enrolled in a part-time course at the
-      faculty of Applied Mathematics and Computer Science. For some years having
-      been engaged in the implementation of information technologies (BIM) in
-      construction (AEC) I am looking for aportunity to get into IT in order to
-      combine my previous experience in engineering and computer skills and
-      knowledge.
-    </div>
-  </div>
-</div>
--->
-
+{% extends 'base.html' %} 
+{% block title %}EDUCATION{% endblock title %}
+{% block header %}EDUCATION{% endblock header %}
+{% block content %}
 <div id="education" class="education">
-  <h2 class="heading">EDUCATION</h2>
+
   <div class="education-content">
+
     <div class="info">
       <a href="https://www.uc.pt/cemmpre/" target="_blank">
         <div class="position">Pre-Doctoral program</div>
@@ -129,12 +108,18 @@
   <h2 class="heading">COURSES</h2>
   <ul class="ul-courses">
     <li>
-      <a class="active" href="https://app.rs.school/certificate/kfsdtobu" target="_blank"
+      <a
+        class="active"
+        href="https://app.rs.school/certificate/kfsdtobu"
+        target="_blank"
         ><strong>NodeJS 2022Q4 (RS School Certificate)</strong></a
       >
     </li>
     <li>
-      <a class="active" href="https://app.rs.school/certificate/xo22bf92" target="_blank"
+      <a
+        class="active"
+        href="https://app.rs.school/certificate/xo22bf92"
+        target="_blank"
         ><strong
           >JS/Frontend - Pre-School 2022Q2 (RS School Certificate)</strong
         ></a
@@ -162,7 +147,8 @@
     <li>
       <a
         class="active"
-        href="https://ielts.ucles.org.uk/ielts-trf/welcome.html" target="_blank"
+        href="https://ielts.ucles.org.uk/ielts-trf/welcome.html"
+        target="_blank"
       >
         <strong>
           International English Language Testing System (IELTS), British
@@ -177,4 +163,29 @@
     </li>
   </ol>
 </div>
-{% endblock %}
+{% endblock content %}
+
+<!--
+<div id="about" class="about">
+  <div class="photo">
+    <img
+      src="{{ url_for('static', filename='images/IMG_7201.jpg') }}"
+      alt="me"
+    />
+  </div>
+  <div class="about-text">
+    <h1 class="heading">SERGEY SYCHEV</h1>
+    <div class="subheading">
+      My initial education was related to Manufacturing Engineering, as well as
+      the machining and cutting tools design. Then after graduating from the
+      University, I was enrolled in a Master's degree program in the field of
+      machining. In the following, I enrolled in a part-time course at the
+      faculty of Applied Mathematics and Computer Science. For some years having
+      been engaged in the implementation of information technologies (BIM) in
+      construction (AEC) I am looking for aportunity to get into IT in order to
+      combine my previous experience in engineering and computer skills and
+      knowledge.
+    </div>
+  </div>
+</div>
+-->
