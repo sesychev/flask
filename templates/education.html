@@ -3,7 +3,9 @@
 {% block header %}EDUCATION{% endblock header %}
 
 {% block content %}
-<div id="education" class="education">
+<div class="main">
+<div class="main-container">
+  <div id="education" class="education">
     {% for item in data %}
     <div class="info">
       <a href="{{ item.link }}" target="_blank">
@@ -15,94 +17,97 @@
       </div>
     </div>
     {% endfor %}
-</div>
-
-<div id="awards" class="awards">
-  <h2 class="heading">AWARDS</h2>
-  <div class="content">
-    Awarded the first prize in Republican contest of students' scientific works
-    of higher education institutions of the Republic of Belarus for the
-    scientific research paper 'Finite Element modelling of orthogonal metal
-    cutting process by the tool with anti-wear coating', 2005
   </div>
-</div>
 
-<div id="grants" class="grants">
-  <h2 class="heading">GRANTS</h2>
-  <div class="content">
-    <strong>Title:</strong> 'Synthesis of ceramic composite coatings on metals
-    with increased strength and anticorrosion properties by micro-arc
-    oxidation'<br /><strong> Project number: </strong> 18-73-00025
+  <div id="awards" class="awards">
+    <h2 class="heading">AWARDS</h2>
+    <div class="content">
+      Awarded the first prize in Republican contest of students' scientific works
+      of higher education institutions of the Republic of Belarus for the
+      scientific research paper 'Finite Element modelling of orthogonal metal
+      cutting process by the tool with anti-wear coating', 2005
+    </div>
   </div>
-  <div class="content">
-    <strong>Title:</strong> 'Experimental and theoretical study of nonlinear
-    dynamic effects of cluster formation during surface and subsurface
-    destruction in tribological systems at nano- and meso-scale levels'<br /><strong
-      >Project number:</strong
-    >
-    10-08-00966
+
+  <div id="grants" class="grants">
+    <h2 class="heading">GRANTS</h2>
+    <div class="content">
+      <strong>Title:</strong> 'Synthesis of ceramic composite coatings on metals
+      with increased strength and anticorrosion properties by micro-arc
+      oxidation'<br /><strong> Project number: </strong> 18-73-00025
+    </div>
+    <div class="content">
+      <strong>Title:</strong> 'Experimental and theoretical study of nonlinear
+      dynamic effects of cluster formation during surface and subsurface
+      destruction in tribological systems at nano- and meso-scale levels'<br /><strong
+        >Project number:</strong
+      >
+      10-08-00966
+    </div>
   </div>
-</div>
 
-<div id="courses" class="courses">
-  <h2 class="heading">COURSES</h2>
-  <ul class="ul-courses">
-    <li>
-      <a
-        class="active"
-        href="https://app.rs.school/certificate/kfsdtobu"
-        target="_blank"
-        ><strong>NodeJS 2022Q4 (RS School Certificate)</strong></a
-      >
-    </li>
-    <li>
-      <a
-        class="active"
-        href="https://app.rs.school/certificate/xo22bf92"
-        target="_blank"
-        ><strong
-          >JS/Frontend - Pre-School 2022Q2 (RS School Certificate)</strong
-        ></a
-      >
-    </li>
-    <li>Python Core Development - EPAM (2023)</li>
-    <li>.NET Development - EPAM (2022/KZ)</li>
-    <li>.NET Development - EPAM (2021Q4/BY/2)</li>
-    <li>.NET Development - EPAM (2021Q4/BY/1)</li>
-  </ul>
-</div>
+  <div id="courses" class="courses">
+    <h2 class="heading">COURSES</h2>
+    <ul class="ul-courses">
+      <li>
+        <a
+          class="active"
+          href="https://app.rs.school/certificate/kfsdtobu"
+          target="_blank"
+          ><strong>NodeJS 2022Q4 (RS School Certificate)</strong></a
+        >
+      </li>
+      <li>
+        <a
+          class="active"
+          href="https://app.rs.school/certificate/xo22bf92"
+          target="_blank"
+          ><strong
+            >JS/Frontend - Pre-School 2022Q2 (RS School Certificate)</strong
+          ></a
+        >
+      </li>
+      <li>Python Core Development - EPAM (2023)</li>
+      <li>.NET Development - EPAM (2022/KZ)</li>
+      <li>.NET Development - EPAM (2021Q4/BY/2)</li>
+      <li>.NET Development - EPAM (2021Q4/BY/1)</li>
+    </ul>
+  </div>
 
-<div id="languages" class="languages">
-  <h2 class="heading">LANGUAGES</h2>
-  <ul class="ul-languages">
-    <li>Belarusian and Russian – Native/Bilingual</li>
-    <li>English – Upper intermediate (IELTS 6.0/CEFR B2)</li>
-    <li>Portuguese – Elementary (CEFR A2)</li>
-  </ul>
-</div>
+  <div id="languages" class="languages">
+    <h2 class="heading">LANGUAGES</h2>
+    <ul class="ul-languages">
+      <li>Belarusian and Russian – Native/Bilingual</li>
+      <li>English – Upper intermediate (IELTS 6.0/CEFR B2)</li>
+      <li>Portuguese – Elementary (CEFR A2)</li>
+    </ul>
+  </div>
 
-<div id="certifications" class="certifications">
-  <h2 class="heading">CERTIFICATIONS</h2>
-  <ol class="subheading">
-    <li>
-      <a
-        class="active"
-        href="https://ielts.ucles.org.uk/ielts-trf/welcome.html"
-        target="_blank"
-      >
-        <strong>
-          International English Language Testing System (IELTS), British
-          Council, 2021
-        </strong>
-      </a>
-    </li>
-    <li lang="pt">
-      O nível А2 do curso de Português Língua de AcolhimentoO nível А2 do curso
-      de Português Língua de Acolhimento, Centro de Emprego е Formação
-      Profissional de Coimbra, 2021
-    </li>
-  </ol>
+  <div id="certifications" class="certifications">
+    <h2 class="heading">CERTIFICATIONS</h2>
+    <ol class="subheading">
+      <li>
+        <a
+          class="active"
+          href="https://ielts.ucles.org.uk/ielts-trf/welcome.html"
+          target="_blank"
+        >
+          <strong>
+            International English Language Testing System (IELTS), British
+            Council, 2021
+          </strong>
+        </a>
+      </li>
+      <li lang="pt">
+        O nível А2 do curso de Português Língua de AcolhimentoO nível А2 do curso
+        de Português Língua de Acolhimento, Centro de Emprego е Formação
+        Profissional de Coimbra, 2021
+      </li>
+    </ol>
+  </div>
+
 </div>
+</dv>
 {% endblock content %}
 
 <!--

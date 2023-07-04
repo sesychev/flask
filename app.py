@@ -81,7 +81,12 @@ def skills():
     return render_template('skills.html')
 
 
+import random
+import sys
+from faker import Faker
+
 
 
 if __name__ == "__main__":
-    pass                    
+    pass  
+              

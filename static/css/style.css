@@ -88,9 +88,10 @@ ol, ul {
     background-color: rgb(255, 253, 208, 0.75);
 }
 
+.title,
 .navbar {
     margin: auto;
-    max-width: 1024px;
+    max-width: 80rem;
     padding: 0 20px;
 }
 
@@ -131,31 +132,67 @@ ol, ul {
     line-height: 160%;
 }
 
+.heading {
+    grid-area: heading;
+}
+
 /*Main*/
 .main {
     min-height: 100vh;
-
-    grid-area: main;
     display: grid;
     grid-template-areas:
-        "home"
-        "about"
-        "experience"
-        "education"
-        "grant"
-        "award"
-        "certificat";
+        "heading"
+        "main";
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     align-content: start;
+    row-gap: 20px; 
+
+    padding: 0 20px;
+    max-width: 80rem;
+
+    width: 100%;
+    margin: auto;
+   
+    font-family: 'AvantGarde';
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 160%;
+}
+
+.ifc {
+        min-height: 100vh;
+        display: grid;
+        grid-template-areas:
+            "heading"
+            "main";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        align-content: start;
+        row-gap: 20px; 
+    
+        width: 100%;
+        margin: auto;
+       
+        font-family: 'AvantGarde';
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 160%;
+}
+
+.main-container {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
 }
 
 .info + .info {
-    padding-top: 1em;
+    /*padding-top: 1em;*/
 }
 
 .heading {
-    margin-bottom: 1.5rem;  
+    /*margin-bottom: 1.5rem;  */
 }
 
 /*Home*/
@@ -173,7 +210,7 @@ ol, ul {
     display: grid;
     grid-area: about;
     grid-template-columns: 1.5fr 2fr;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     /*background-color: #FDF4E3;*/
     /*background-color: rgb(228, 222, 208);*/
 }
@@ -197,6 +234,10 @@ ol, ul {
 
 .about-text {
     grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: center;*/
 }
 
 .experience {
@@ -217,8 +258,8 @@ ol, ul {
 
 .grants {
     grid-area: grant;
-    margin-bottom: 20px;
-    display: none;
+    /*margin-bottom: 20px;*/
+    /*display: none;*/
     /*
     background-color: #D2B48C;
     background-color: #d8ae64;
@@ -295,7 +336,7 @@ ol, ul {
 .courses,
 .languages,
 .certifications {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
     /*margin-bottom: 55px;*/
 }
 

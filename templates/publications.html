@@ -2,8 +2,9 @@
 {% block title %}PUBLICATIONS{% endblock title %} 
 {% block header %}PUBLICATIONS{% endblock header %}
 
-{% block content %} 
-
+{% block content %}
+<div class="main">
+<div class="main-container">
 {% for item in data %}
 <div class="info">
   <div class="subheading">
@@ -24,5 +25,6 @@
   </div>
 </div>
 {% endfor %} 
-
+</div>
+</div>
 {% endblock content %}

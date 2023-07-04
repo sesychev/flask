@@ -1,5 +1,10 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% block title %}ABOUT{% endblock title %}
+{% block header %}{% endblock header %}
 
+{% block content %}
+<div class="main">
+<div class="main-container">
 <div id="about" class="about">
   <div class="photo">
     <img
@@ -8,7 +13,8 @@
     />
   </div>
   <div class="about-text">
-    <h1 class="heading">SERGEY SYCHEV</h1>
+    <!--<h1 class="heading">SERGEY SYCHEV</h1>-->
+    <h1 class="">SERGEY SYCHEV</h1>
     <div class="subheading">
       My initial education was related to Manufacturing Engineering, as well as
       the machining and cutting tools design. Then after graduating from the
@@ -228,5 +234,6 @@
     -->
   </div>
 </div>
-
+</div>
+</div>
 {% endblock %}
