@@ -1,35 +1,34 @@
-﻿{% extends 'base.html' %}
-{% block title %}IFC{% endblock title %}
-{% block favicon %}<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/IFC_bsi_icon.png') }}" />{% endblock %}
-{% block header %}IFC{% endblock header %}
-{% block style %}
-{{ super () }}
+﻿{% extends 'base.html' %} {% block title %}IFC{% endblock title %} {% block
+favicon %}<link
+  rel="icon"
+  type="image/x-icon"
+  href="{{ url_for('static', filename='images/IFC_bsi_icon.png') }}"
+/>{% endblock %} {% block header %}IFC{% endblock header %} {% block style %} {{
+super () }}
 <link href="{{ url_for('static', filename='css/ifc.css') }}" rel="stylesheet" />
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 <div class="ifc">
-    <table id="data" class="table table-striped">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Address</th>
-            <th>Phone Number</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for user in users %}
-            <tr>
-              <td>{{ user.name }}</td>
-              <td>{{ user.age }}</td>
-              <td>{{ user.address }}</td>
-              <td>{{ user.phone }}</td>
-              <td>{{ user.email }}</td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in data %}
+      <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.age }}</td>
+        <td>{{ item.address }}</td>
+        <td>{{ item.phone }}</td>
+        <td>{{ item.email }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </div>
 {% endblock %}
