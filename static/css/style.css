@@ -160,26 +160,6 @@ ol, ul {
     line-height: 160%;
 }
 
-.ifc {
-        min-height: 100vh;
-        display: grid;
-        grid-template-areas:
-            "heading"
-            "main";
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        align-content: start;
-        row-gap: 20px; 
-    
-        width: 100%;
-        margin: auto;
-       
-        font-family: 'AvantGarde';
-        font-weight: 500;
-        font-size: 15px;
-        line-height: 160%;
-}
-
 .main-container {
     grid-area: main;
     display: flex;
