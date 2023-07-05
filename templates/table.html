@@ -7,27 +7,32 @@ favicon %}<link
 style %} {{ super() }}
 <link href="{{ url_for('static', filename='css/ifc.css') }}" rel="stylesheet" />
 {% endblock style %} {% block content %}
-<div class="ifc">
-  <table id="data" class="table table-striped">
-    <thead>
-      <tr>
-        {% for item in titles %}
-        <th>{{ titles[loop.index - 1] }}</th>
+<div class="table-wrapper">
+  <section class="section"></section>
+  <div class="main-container">
+    {{ pagination.info }}
+    <table id="data" class="table table-hover">
+      <thead>
+        <tr>
+          {% for item in titles %}
+          <th>{{ titles[loop.index - 1] }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in data %}
+        <tr>
+          <td>{{ loop.index }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.age }}</td>
+          <td>{{ item.address }}</td>
+          <td>{{ item.phone }}</td>
+          <td>{{ item.email }}</td>
+        </tr>
         {% endfor %}
-      </tr>
-    </thead>
-    <tbody>
-      {% for item in data %}
-      <tr>
-        <td>{{ loop.index }}</td>
-        <td>{{ item.name }}</td>
-        <td>{{ item.age }}</td>
-        <td>{{ item.address }}</td>
-        <td>{{ item.phone }}</td>
-        <td>{{ item.email }}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+    {{ pagination.links }}
+  </div>
 </div>
 {% endblock content%}

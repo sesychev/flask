@@ -1,10 +1,11 @@
-{% extends 'base.html' %} 
-{% block title %}EXPERIENCE{% endblock title %}
-{% block favicon %}<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/work.svg') }}" />{% endblock %}
-{% block header %}WORK EXPERIENCE{% endblock header %}
-
-{% block content %}
-<div class="main">
+{% extends 'base.html' %} {% block title %}EXPERIENCE{% endblock title %} {%
+block favicon %}<link
+  rel="icon"
+  type="image/x-icon"
+  href="{{ url_for('static', filename='images/work.svg') }}"
+/>{% endblock %} {% block header %}WORK EXPERIENCE{% endblock header %} {% block
+content %}
+<div class="outer-wrapper">
   <div class="main-container">
     {% for item in data %}
     <div class="info">
@@ -14,20 +15,19 @@
         </a>
       </div>
       <div class="position-year">
-        <div class="company">{{ item.company }}<br/></div>
+        <div class="company">{{ item.company }}<br /></div>
         <div class="year">{{ item.years }}</div>
       </div>
       <div class="subheading">
         <div>{{ item.job }}</div>
       </div>
     </div>
-  {% endfor %}
+    {% endfor %}
   </div>
 </div>
 {% endblock %}
 
-
-    <!--
+<!--
 <div class="info">
       <a href="https://gle.ru/eng/" target="_blank">
       <div class="position">Chief Specialist</div>
@@ -207,4 +207,3 @@
       </div>
     </div>
     -->
-    

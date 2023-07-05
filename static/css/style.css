@@ -114,16 +114,13 @@ ul {
 }
 
 /*Main*/
-main {
-}
-
 main,
-.footer {
+footer {
   color: #fffdd0;
   background-color: black;
 }
 
-.main {
+.outer-wrapper {
   min-height: 100vh;
   display: grid;
   grid-template-areas:
@@ -258,6 +255,7 @@ main,
   grid-template-rows: auto auto;
   grid-gap: 20px;
 }
+
 /*Main*/
 .aside {
   position: relative;

@@ -145,7 +145,7 @@ body {
 }
 */
 /**/
-.main {
+.outer-wrapper {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: main;

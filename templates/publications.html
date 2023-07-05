@@ -1,31 +1,40 @@
-﻿{% extends 'base.html' %} 
-{% block title %}PUBLICATIONS{% endblock title %}
-{% block favicon %}<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/journal.svg') }}" />{% endblock %}
-{% block header %}PUBLICATIONS{% endblock header %}
-
-{% block content %}
-<div class="main">
-<div class="main-container">
-{% for item in data %}
-<div class="info">
-  <div class="subheading">
-    <div>
-      <span>{{ item.id }}.</span>
-      <span> {{ item.title }} </span>
-      <span>{{ item.authors }}</span>
-      <span> {{ item.journal }}</span>
-      <div class="">
-        {% if 'DOI:' in item.link %}
+﻿{% extends 'base.html' %} {% block title %}PUBLICATIONS{% endblock title %} {%
+block favicon %}<link
+  rel="icon"
+  type="image/x-icon"
+  href="{{ url_for('static', filename='images/journal.svg') }}"
+/>{% endblock %} {% block header %}PUBLICATIONS{% endblock header %} {% block
+content %}
+<div class="outer-wrapper">
+  <div class="main-container">
+    {% for item in data %}
+    <div class="info">
+      <div class="subheading">
+        <div>
+          <span>{{ item.id }}.</span>
+          <span> {{ item.title }} </span>
+          <span>{{ item.authors }}</span>
+          <span> {{ item.journal }}</span>
+          <div class="">
+            {% if 'DOI:' in item.link %}
             <span>{{ item.link.split(' ')[0] }}</span>
-            <strong><a href="{{ item.link.split(' ')[1] }}" target="_blank">{{ item.link.split(' ')[1] }}</a></strong>
-        {% else %}
-            <strong><a href="{{ item.link }}" target="_blank">{{ item.link }}</a></strong>
-        {% endif %}
+            <strong
+              ><a href="{{ item.link.split(' ')[1] }}" target="_blank"
+                >{{ item.link.split(' ')[1] }}</a
+              ></strong
+            >
+            {% else %}
+            <strong
+              ><a href="{{ item.link }}" target="_blank"
+                >{{ item.link }}</a
+              ></strong
+            >
+            {% endif %}
+          </div>
+        </div>
       </div>
     </div>
+    {% endfor %}
   </div>
-</div>
-{% endfor %} 
-</div>
 </div>
 {% endblock content %}

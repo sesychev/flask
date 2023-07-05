@@ -1,3 +1,5 @@
+from flask import Blueprint
+from flask_paginate import Pagination, get_page_parameter, get_page_args
 import os
 from flask import Flask, render_template, json, current_app
 from data import data_fake, titles
@@ -48,7 +50,16 @@ def publications():
 
 @app.route('/table')
 def table():
-    return render_template('table.html', data=data_fake, titles=titles)
+
+    total = len(data_fake)
+
+    page, per_page, offset = get_page_args(
+        page_parametr="page",
+        per_page_parmeter="per_page")
+
+    pagination = Pagination(page=page, total=total)
+
+    return render_template('table.html', data=data_fake[offset: offset+per_page], titles=titles, pagination=pagination)
 
 
 @app.route('/ifc')
