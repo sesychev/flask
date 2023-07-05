@@ -7,10 +7,11 @@ fake = Faker("ru_RU")
 # Declare an empty dictionary
 data_fake = []
 
+titles = ['Number', 'Name', 'Age', 'Address', 'Phone Number', 'Email']
 path = os.path.join(os.getcwd(), 'static', 'data', 'users.json')
 
 # Iterate the loop based on the input value and generate fake data
-for n in range(0, 10):
+for n in range(0, 100):
     temp = {}
     temp['name'] = fake.name()
     temp['age'] = fake.random_number(digits=2)
@@ -24,7 +25,7 @@ for n in range(0, 10):
 with open(path, 'w') as fp:
     json.dump(data_fake, fp)
 
-print("File has been created.")
+# print("File has been created.")
 
 '''
                 <td>{{ item.name() }}</td>

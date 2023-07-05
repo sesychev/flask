@@ -1,6 +1,6 @@
 import os
 from flask import Flask, render_template, json, current_app
-from data import data_fake
+from data import data_fake, titles
 
 app = Flask(__name__)
 
@@ -18,6 +18,11 @@ with open(experience) as experience_file:
 with open(publications) as publications_file:
     data_publications = json.load(publications_file)
 # print(data)
+
+
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 
 @app.route('/')
@@ -39,6 +44,11 @@ def experience():
 @app.route('/publications')
 def publications():
     return render_template('publications.html', data=data_publications)
+
+
+@app.route('/table')
+def table():
+    return render_template('table.html', data=data_fake, titles=titles)
 
 
 @app.route('/ifc')

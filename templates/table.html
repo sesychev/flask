@@ -1,0 +1,33 @@
+﻿{% extends 'base.html' %} {% block title %}TABLE{% endblock title %} {% block
+favicon %}<link
+  rel="icon"
+  type="image/x-icon"
+  href="{{ url_for('static', filename='images/IFC_bsi_icon.png') }}"
+/>{% endblock favicon %} {% block header %}TABLE{% endblock header %} {% block
+style %} {{ super() }}
+<link href="{{ url_for('static', filename='css/ifc.css') }}" rel="stylesheet" />
+{% endblock style %} {% block content %}
+<div class="ifc">
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        {% for item in titles %}
+        <th>{{ titles[loop.index - 1] }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in data %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.age }}</td>
+        <td>{{ item.address }}</td>
+        <td>{{ item.phone }}</td>
+        <td>{{ item.email }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock content%}

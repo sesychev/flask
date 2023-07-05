@@ -2,69 +2,100 @@
 <html lang="en">
   <head>
     {% block head %}
-      <title>{% block title %}CV{% endblock %}</title>
+    <title>{% block title %}CV{% endblock %}</title>
+    {% endblock %} {% block favicon %}
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='images/iconmonstr-cv-4.svg') }}"
+    />
     {% endblock %}
 
-    {% block favicon %}
-      <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/iconmonstr-cv-4.svg') }}" />
-    {% endblock %}
-    
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     {% block style %}
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
 
     <!-- custom CSS-->
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+    <link
+      href="{{ url_for('static', filename='css/style.css') }}"
+      rel="stylesheet"
+    />
     {% endblock %}
   </head>
   <body>
-
     <div class="">
       <header class="header border-bottom">
         <nav class="navbar navbar-expand-md">
-          <!--<a class="navbar-brand" href="{{ url_for('index') }}">ABOUT</a>-->
+          <a class="navbar-brand" href="{{ url_for('home') }}">HOME</a>
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuItems" aria-controls="menuItems" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuItems"
+            aria-controls="menuItems"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
 
           <div class="collapse navbar-collapse" id="menuItems">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" href="{{ url_for('index') }}">ABOUT</a>
+                <a class="nav-link" href="{{ url_for('index') }}">ABOUT</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('education') }}">EDUCATION</a>
+                <a class="nav-link" href="{{ url_for('education') }}"
+                  >EDUCATION</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('experience') }}">EXPERIENCE</a>
+                <a class="nav-link" href="{{ url_for('experience') }}"
+                  >EXPERIENCE</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('publications') }}">PUBLICATIONS</a>
+                <a class="nav-link" href="{{ url_for('publications') }}"
+                  >PUBLICATIONS</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('table') }}">TABLE</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('ifc') }}">IFC</a>
               </li>
             </ul>
           </div>
-          
         </nav>
       </header>
 
       <main class="x">
-        <h2 class="title">
-          {% block header %}{% endblock header %}
-        </h2>
+        <h2 class="title">{% block header %}{% endblock header %}</h2>
         {% block content %}{% endblock content %}
       </main>
 
       <footer class="footer border-top">
         <ul id="contacts" class="icons">
-          <li class="container text-dark">Copyright  &copy; 2023 Sergey Sychev</li>
+          <li class="container">Copyright &copy; 2023 Sergey Sychev</li>
         </ul>
       </footer>
 
@@ -86,7 +117,11 @@
         crossorigin="anonymous"
       ></script>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"
+      ></script>
     </div>
   </body>
 </html>
