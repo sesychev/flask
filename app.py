@@ -1,7 +1,7 @@
 from flask import Blueprint
 from flask_paginate import Pagination, get_page_parameter, get_page_args
 import os
-from flask import Flask, render_template, json, current_app
+from flask import Flask, render_template, json, request
 from data import data_fake, titles
 from regress import reg
 
@@ -68,11 +68,13 @@ def ifc():
     return render_template('ifc.html', data=data_fake)
 
 
-@app.route('/progress')
+@app.route('/progress', methods=('GET', 'POST'))
 def progress():
-    data = reg()
+    if request.method == 'POST':
+        data = reg()
+        return render_template('progress.html', data=data)
     # print(data)
-    return render_template('progress.html', data=data)
+    return render_template('progress.html')
 
 
 if __name__ == "__main__":
@@ -94,7 +96,7 @@ def contacts():
 @app.route('/projects')
 def projects():
     return render_template('projects.html')
-                           
+
 @app.route('/skills')
 def skills():
     return render_template('skills.html')

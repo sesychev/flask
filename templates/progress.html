@@ -35,7 +35,17 @@ block style %} {{ super() }}
 
   <pre style="background-color: #fffdd0">{{ data }}</pre>
 
-  <button type="button" onclick="">Click To Execute Script</button>
+  <form method="post">
+    <button type="submit">Click To Execute Script</button>
+  </form>
+
+  <input
+    type="button"
+    id="script"
+    name="scriptbutton"
+    value=" Run Script "
+    onclick="exec('python regress.py');"
+  />
 
   <div>
     <input
