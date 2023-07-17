@@ -3,6 +3,7 @@ from flask_paginate import Pagination, get_page_parameter, get_page_args
 import os
 from flask import Flask, render_template, json, current_app
 from data import data_fake, titles
+from regress import reg
 
 app = Flask(__name__)
 
@@ -65,6 +66,13 @@ def table():
 @app.route('/ifc')
 def ifc():
     return render_template('ifc.html', data=data_fake)
+
+
+@app.route('/progress')
+def progress():
+    data = reg()
+    # print(data)
+    return render_template('progress.html', data=data)
 
 
 if __name__ == "__main__":

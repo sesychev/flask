@@ -1,0 +1,85 @@
+﻿{% extends 'base.html' %} {% block title %}PROGRESS{% endblock title %} {% block
+favicon %}<link
+  rel="icon"
+  type="image/x-icon"
+  href="{{ url_for('static', filename='images/IFC_bsi_icon.png') }}"
+/>{% endblock favicon %} {% block header %}PROGRESS{% endblock header %} {%
+block style %} {{ super() }}
+<link href="{{ url_for('static', filename='css/ifc.css') }}" rel="stylesheet" />
+{% endblock style %} {% block content %}
+<div class="" style="max-width: 80rem">
+  <style type="text/css">
+    body {
+      background-color: black;
+      color: white;
+      width: 100%;
+    }
+    div {
+      margin: auto;
+    }
+    ul {
+      padding: 0;
+      list-style-type: none;
+    }
+    li {
+      cursor: pointer;
+      padding-left: 1rem;
+    }
+    .strip {
+      background-color: rgb(118, 187, 189);
+    }
+    li:hover {
+      background-color: #e9e9f9;
+    }
+  </style>
+
+  <pre style="background-color: #fffdd0">{{ data }}</pre>
+
+  <button type="button" onclick="">Click To Execute Script</button>
+
+  <div>
+    <input
+      type="file"
+      id="filepicker"
+      name="fileList"
+      webkitdirectory
+      multiple
+    />
+    <ul id="listing"></ul>
+  </div>
+
+  <script>
+    let input = document.getElementById("filepicker");
+    let output = document.getElementById("listing");
+    let count = 1;
+
+    input.addEventListener(
+      "change",
+      (event) => {
+        for (const file of event.target.files) {
+          //
+          let item = document.createElement("li");
+          filename = file.webkitRelativePath.split("/")[1];
+
+          if (
+            filename.split(".")[1] === "ifc" &&
+            filename.split(".").length === 2 &&
+            filename !== "G0-A10090RX0.ifc"
+          ) {
+            item.textContent = count++ + ": " + filename;
+
+            if (count % 2 === 0) {
+              item.classList.add("strip");
+            } else {
+              item.classList.add("nostrip");
+            }
+
+            output.appendChild(item);
+          }
+        }
+      },
+      false
+    );
+  </script>
+</div>
+{% endblock content%}
