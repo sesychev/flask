@@ -1,9 +1,9 @@
-from flask import Blueprint
-from flask_paginate import Pagination, get_page_parameter, get_page_args
 import os
+from flask_paginate import Pagination, get_page_args
 from flask import Flask, render_template, json, request
-from data import data_fake, titles
-from regress import reg
+
+from modules.data import data_fake, titles
+from modules.regress import reg
 
 app = Flask(__name__)
 
@@ -29,7 +29,7 @@ def home():
 
 
 @app.route('/')
-@app.route('/index')
+@app.route('/about')
 def index():
     return render_template('index.html')
 
@@ -51,15 +51,11 @@ def publications():
 
 @app.route('/table')
 def table():
-
     total = len(data_fake)
-
     page, per_page, offset = get_page_args(
         page_parametr="page",
         per_page_parmeter="per_page")
-
     pagination = Pagination(page=page, total=total)
-
     return render_template('table.html', data=data_fake[offset: offset+per_page], titles=titles, pagination=pagination)
 
 
@@ -78,26 +74,5 @@ def progress():
 
 
 if __name__ == "__main__":
-    pass
-
-'''
-#@app.route('/about')
-#def about():
-#    return render_template('about.html')
-
-@app.route('/awards')
-def awards():
-    return render_template('awards.html')
-
-@app.route('/contacts')
-def contacts():
-    return render_template('contacts.html')
-
-@app.route('/projects')
-def projects():
-    return render_template('projects.html')
-
-@app.route('/skills')
-def skills():
-    return render_template('skills.html')
-'''
+    app.debug = True
+    app.run()
