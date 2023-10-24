@@ -1,0 +1,61 @@
+name: Pipeline name  # Имя пайплайна
+env:  # Переменные среды
+  VARIABLE: "var"
+
+on:  # Триггеры для запуска пайплайна
+  workflow_dispatch:  # Ручной запуск через UI Гитхаба
+  pull_request:  # Для пул реквестов
+
+jobs: # Список джоб
+  validation: # Имя джобы
+    runs-on: ubuntu-latest
+    steps:   # Действия для нашей job
+      - name: Clone repo  # Клонируем наш репозиторий (можно клонировать и другие (даже приватные), только нужен другой action)
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.7  # Устанавливаем питончик нужной версии
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+
+      - name: Configure AWS Credentials  # Конфигурируем креды для работы с AWS
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}  # Ниже будет картинка, где показана настройка secrets
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
+          aws-region: ${{ env.AWS_REGION_NAME }}
+
+      - name: Get response of RDS DB structure  # Получаем адрес БД через AWS CLI
+        run: aws rds describe-db-instances --db-instance-identifier ${{ secrets.MYSQL_SCHEMA_NAME }} >> rds_response.json
+
+      - name: Get database URL
+        id: url
+        uses: sergeysova/jq-action@v2
+        with:
+          cmd: "jq -r '.DBInstances[].Endpoint.Address' rds_response.json"  # Фильтруем JSON
+
+      - name: Install dependencies  # Устанавлиаем Python зависимости
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+        
+      - name: Lint with pycodestyle  # Проверяем соответствует ли наш код PEP8
+        run: |
+          source venv/bin/activate
+          pycodestyle --exclude=venv --max-line-length=150 .
+
+      - name: Run unit tests  # Запускаем тестики
+        run: |
+          sudo apt upgrade
+          pytest
+        env:  # Необходимые системные переменные, чтобы проект не крашнулся
+          # Configure AWS settings environments for tests
+          AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY }}
+          AWS_SECRET_KEY: ${{ secrets.AWS_SECRET_KEY }}
+          # Configure production MySQL settings
+          MYSQL_USER: ${{ secrets.MYSQL_USER }}
+          MYSQL_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
+          MYSQL_URL: ${{ steps.url.outputs.value }}
+          MYSQL_DB: ${{ secrets.MYSQL_DB }}
+          # Configure SQLAlchemy
+          SQL_ALCHEMY_SECRET_KEY: ${{ secrets.SQL_ALCHEMY_SECRET_KEY }}
