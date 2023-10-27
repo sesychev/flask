@@ -1,5 +1,5 @@
-{% extends 'base.html' %} {% block title %}HOME{% endblock title %} {% block
-favicon %}<link
+{% extends 'base.html' %} {% set active_page = "home" %} {% block title %}HOME{%
+endblock title %} {% block favicon %}<link
   rel="icon"
   type="image/x-icon"
   href="{{ url_for('static', filename='images/home.svg') }}"

@@ -27,6 +27,10 @@ a {
   word-break: break-all;
 }
 
+.active {
+  color: black;
+}
+
 body {
   /*height: 100vh;*/
   /*margin-bottom: 60px;*/
@@ -51,8 +55,16 @@ a:hover {
   color: #fffdd0;
 }
 
+.ul-projects a:hover {
+  color: unset;
+}
+
 a:link {
   text-decoration: none !important;
+}
+
+.navbar-brand {
+  color: #fffdd0;
 }
 
 li {

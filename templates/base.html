@@ -43,7 +43,7 @@
     <div class="">
       <header class="header border-bottom">
         <nav class="navbar navbar-expand-md">
-          <a class="navbar-brand" href="{{ url_for('home') }}">HOME</a>
+          <a class="navbar-brand" href="{{ url_for('home') }}">LOGO</a>
 
           <button
             class="navbar-toggler"
@@ -60,20 +60,30 @@
           <div class="collapse navbar-collapse" id="menuItems">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('index') }}">ABOUT</a>
+                <a
+                  class="nav-link {{ 'active' if active_page == 'about' else '' }}"
+                  href="{{ url_for('index') }}"
+                  >ABOUT</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('education') }}"
+                <a
+                  class="nav-link {{ 'active' if active_page == 'education' else '' }}"
+                  href="{{ url_for('education') }}"
                   >EDUCATION</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('experience') }}"
+                <a
+                  class="nav-link {{ 'active' if active_page == 'experience' else '' }}"
+                  href="{{ url_for('experience') }}"
                   >EXPERIENCE</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('publications') }}"
+                <a
+                  class="nav-link {{ 'active' if active_page == 'publications' else '' }}"
+                  href="{{ url_for('publications') }}"
                   >PUBLICATIONS</a
                 >
               </li>
