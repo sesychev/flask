@@ -52,7 +52,7 @@ a:hover {
 }
 
 a:link {
-  : none !important;
+  text-decoration: none !important;
 }
 
 li {
