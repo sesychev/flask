@@ -8,27 +8,34 @@
   },
   {
     "id": 2,
+    "position": "PhD program",
+    "years": "Sept. 2009 - Sept. 2012",
+    "company": "Laboratory of Friction and Wear, St. Petersburg, Russia",
+    "link": "https://www.ipme.ru/ipme/labs/wear/index.htm"
+  },
+  {
+    "id": 3,
     "position": "Mathematician - programmer",
     "years": "Oct. 2008 - June 2009",
     "company": "Belarusian State University, Faculty of advanced training and retraining, Minsk, Belarus",
     "link": "https://bsu.by/en/structure/faculties/kafedry/faculty-of-advanced-training-and-retraining-d"
   },
   {
-    "id": 3,
+    "id": 4,
     "position": "Master in Manufacturing Technology",
     "years": "Oct. 2004 - June 2005",
     "company": "Polotsk State University, Novopolotsk, Belarus",
     "link": "https://english.spbstu.ru/"
   },
   {
-    "id": 4,
+    "id": 5,
     "position": "Master in Manufacturing Engineering",
     "years": "Sept. 1999 - June 2004",
     "company": "Belarusian-Russian University, Mogilev, Belarus",
     "link": "http://en.bru.by/"
   },
   {
-    "id": 5,
+    "id": 6,
     "position": "Diploma of Specialized Secondary Education in Electrical Engineering",
     "years": "Sept. 1995 - June 1999",
     "company": "Orsha State College of Railway Transport, Orsha, Belarus",
