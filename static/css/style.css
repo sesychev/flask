@@ -44,8 +44,15 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
-  color: black;
   color: #d53e07;
+}
+
+a:hover {
+  color: #fffdd0;
+}
+
+a:link {
+  : none !important;
 }
 
 li {
