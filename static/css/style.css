@@ -22,7 +22,6 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-.xxx span,
 a {
   word-break: break-all;
 }
@@ -273,7 +272,9 @@ footer {
   display: grid;
   grid-template-areas:
     "projects contacts"
-    "skills interest";
+    "skills interest"
+    "skills interest"
+    "certs certs";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   grid-gap: 20px;
@@ -310,7 +311,8 @@ footer {
 .contacts,
 .projects,
 .interests,
-.skills {
+.skills,
+.certs {
   border-radius: 10px;
   background-color: gray;
   background-color: #fffdd0;
@@ -423,6 +425,18 @@ footer {
   height: 24px;
 }
 
+.certs {
+  grid-area: certs;
+  /*background-color: rgb(241, 189, 124);
+    background-color: #D2B48C;*/
+}
+
+.ul-certs {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 /**/
 .footer {
   grid-area: footer;
@@ -449,6 +463,17 @@ footer {
 .icon {
   width: 44px;
   height: 44px;
+}
+
+.icon-aws {
+  width: 70px;
+  height: 70px;
+  transition: 1s; /* Время эффекта */
+}
+
+.icon-aws:hover {
+  scale: 2; /* Увеличиваем масштаб */
+  translate: (0, 50%);
 }
 
 .position-year {
@@ -610,7 +635,8 @@ color: #004f49;
       "projects"
       "contacts"
       "skills"
-      "interest";
+      "interest"
+      "certs";
 
     grid-template-columns: 1fr;
   }
@@ -637,6 +663,11 @@ color: #004f49;
 
   .position {
     font-size: 18px;
+  }
+
+  .icon-aws {
+    width: 50px;
+    height: 50px;
   }
 }
 

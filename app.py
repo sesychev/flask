@@ -31,7 +31,7 @@ def home():
 @app.route('/')
 @app.route('/about')
 def index():
-    return render_template('index.html')
+    return render_template('about.html')
 
 
 @app.route('/education')

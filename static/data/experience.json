@@ -1,82 +1,82 @@
 [
-    {
-      "id": 1,
-      "position": "Chief Specialist",
-      "years": "Nov. 2022 - Present",
-      "company": "GLE LLC, St. Petersburg, Russia",
-      "job": "Analyzing project data in BIM.",
-      "link": "https://gle.ru/eng/"
-    },
-    {
-        "id": 2,
-        "position": "BIM Manager",
-        "years": "Feb. 2022 - Nov. 2022",
-        "company": "BPS International GmbH, Munich, Germany",
-        "job": "Analyzing project data in BIM.",
-        "link": "https://bpsinternational.de/en"
-      },
-      {
-        "id": 3,
-        "position": "BIM Manager",
-        "years": "Apr. 2018 - Sept. 2021",
-        "company": "Renaissance Construction, St. Petersburg, Russia",
-        "job": "Development and approval of BIM Execution Plans (BEPs) and Employer's information Requirements (EIRs). Managing the project Common Data Environments (CDE) using BIM 360. Preparation of BIM models and asset information for handover to client. Attending coordination meetings.",
-        "link": "https://rencons.com/?lang=en"
-      },
-      {
-        "id": 4,
-        "position": "Leading Specialist",
-        "years": "Mar. 2017 - Apr. 2018",
-        "company": "JSC «RUSAL VAMI», St. Petersburg, Russia",
-        "job": "Implementation of BIM technology in the internal business processes of the company and ensuring the effective work of BIM team. BIM software selection and evaluation. Ensure ongoing development and implementation of standards, templates and libraries. Identify/undertake training needs when require.",
-        "link": "https://rusal.ru/en/"
-      },
-      {
-        "id": 5,
-        "position": "Design Engineer",
-        "years": "July 2016 - Mar. 2017",
-        "company": "TechnoSystems Company Ltd, St. Petersburg, Russia",
-        "job": "Development of equipment and professional solutions for the safe discharge, transportation, storage, transshipment, bunkering, accounting, measurement and delivery of liquid, bulk and gaseous cargo.",
-        "link": "https://www.techno-systems.ru/"
-      },
-      {
-        "id": 6,
-        "position": "BIM Coordinator",
-        "years": "Oct. 2015 - Mar. 2016",
-        "company": "Spectrum Group, St. Petersburg, Russia",
-        "job": "      Support the BIM manager in all activities. Support project team on BIM tools and uses. Supporting projects with implementing 3D coordination and federation, visualization, 4D animations, 5D quantity take-off and costs. Prepare BIM Execution Plan for Projects.",
-        "link": "https://spectrum-group.ru/en/"
-      },
-      {
-        "id": 6,
-        "position": "BIM Specialist",
-        "years": "Jan. 2015 - Oct. 2015",
-        "company": "JSC KB VIPS, St. Petersburg, Russia",
-        "job": "Implementation BIM modelling technology. Assistance with clash detection and conflict resolution using Navisworks. Undertaking modelling exercises in Revit to assist the site team.",
-        "link": "http://kbvips.ru/node/387"
-      },
-      {
-        "id": 7,
-        "position": "Senior Developer",
-        "years": "Sept. 2013 - July 2015",
-        "company": "Peter the Great St.Petersburg Polytechnic University (SPbPU), St. Petersburg, Russia",
-        "job": "TBD",
-        "link": "https://english.spbstu.ru/"
-      },
-      {
-        "id": 8,
-        "position": "Senior Engineer",
-        "years": "Sept. 2010 - Sept. 2013",
-        "company": "Peter the Great St.Petersburg Polytechnic University (SPbPU), St. Petersburg, Russia",
-        "job": "TBD",
-        "link": "https://english.spbstu.ru/"
-      },
-      {
-        "id": 8,
-        "position": "Engineer",
-        "years": "Oct. 2009 - Sept. 2010",
-        "company": "Peter the Great St.Petersburg Polytechnic University (SPbPU), St. Petersburg, Russia",
-        "job": "TBD",
-        "link": "https://english.spbstu.ru/"
-      }
-  ]
+  {
+    "id": 1,
+    "position": "Chief Specialist",
+    "years": "Nov. 2022 - Present",
+    "company": "GLE LLC, St. Petersburg, Russia",
+    "job": "Analyzing project data in BIM (Building Information Modeling).",
+    "link": "https://gle.ru/eng/"
+  },
+  {
+    "id": 2,
+    "position": "BIM Manager",
+    "years": "Feb. 2022 - Nov. 2022",
+    "company": "BPS International GmbH, Munich, Germany",
+    "job": "Analyzing project data in BIM (Building Information Modeling).",
+    "link": "https://bpsinternational.de/en"
+  },
+  {
+    "id": 3,
+    "position": "BIM Manager",
+    "years": "Apr. 2018 - Sept. 2021",
+    "company": "Renaissance Construction, St. Petersburg, Russia",
+    "job": "Development and approval of BIM Execution Plans (BEPs) and Employer's information Requirements (EIRs). Managing the project Common Data Environments (CDE) using BIM 360. Preparation of BIM models and asset information for handover to client. Attending coordination meetings.",
+    "link": "https://rencons.com/?lang=en"
+  },
+  {
+    "id": 4,
+    "position": "Leading Specialist",
+    "years": "Mar. 2017 - Apr. 2018",
+    "company": "JSC «RUSAL VAMI», St. Petersburg, Russia",
+    "job": "Implementation of BIM technology in the internal business processes of the company and ensuring the effective work of BIM team. BIM software selection and evaluation. Ensure ongoing development and implementation of standards, templates and libraries. Identify/undertake training needs when require.",
+    "link": "https://rusal.ru/en/"
+  },
+  {
+    "id": 5,
+    "position": "Design Engineer",
+    "years": "July 2016 - Mar. 2017",
+    "company": "TechnoSystems Company Ltd, St. Petersburg, Russia",
+    "job": "Development of equipment and professional solutions for the safe discharge, transportation, storage, transshipment, bunkering, accounting, measurement and delivery of liquid, bulk and gaseous cargo.",
+    "link": "https://www.techno-systems.ru/"
+  },
+  {
+    "id": 6,
+    "position": "BIM Coordinator",
+    "years": "Oct. 2015 - Mar. 2016",
+    "company": "Spectrum Group, St. Petersburg, Russia",
+    "job": "      Support the BIM manager in all activities. Support project team on BIM tools and uses. Supporting projects with implementing 3D coordination and federation, visualization, 4D animations, 5D quantity take-off and costs. Prepare BIM Execution Plan for Projects.",
+    "link": "https://spectrum-group.ru/en/"
+  },
+  {
+    "id": 6,
+    "position": "BIM Specialist",
+    "years": "Jan. 2015 - Oct. 2015",
+    "company": "JSC KB VIPS, St. Petersburg, Russia",
+    "job": "Implementation BIM modelling technology. Assistance with clash detection and conflict resolution using Navisworks. Undertaking modelling exercises in Revit to assist the site team.",
+    "link": "http://kbvips.ru/node/387"
+  },
+  {
+    "id": 7,
+    "position": "Senior Developer",
+    "years": "Sept. 2013 - July 2015",
+    "company": "Peter the Great St.Petersburg Polytechnic University (SPbPU), St. Petersburg, Russia",
+    "job": "TBD",
+    "link": "https://english.spbstu.ru/"
+  },
+  {
+    "id": 8,
+    "position": "Senior Engineer",
+    "years": "Sept. 2010 - Sept. 2013",
+    "company": "Peter the Great St.Petersburg Polytechnic University (SPbPU), St. Petersburg, Russia",
+    "job": "TBD",
+    "link": "https://english.spbstu.ru/"
+  },
+  {
+    "id": 8,
+    "position": "Engineer",
+    "years": "Oct. 2009 - Sept. 2010",
+    "company": "Peter the Great St.Petersburg Polytechnic University (SPbPU), St. Petersburg, Russia",
+    "job": "TBD",
+    "link": "https://english.spbstu.ru/"
+  }
+]
