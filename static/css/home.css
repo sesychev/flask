@@ -25,6 +25,10 @@ body {
   background-color: black;
 }
 
+.outer-wrapper {
+  min-height: 100vh;
+}
+
 .header {
   background-color: black;
 }
