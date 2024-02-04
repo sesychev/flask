@@ -222,7 +222,7 @@ footer {
   display: grid;
   grid-template-areas:
     "skills projects"
-    "contacts interest"
+    "interest contacts"
     "certs certs";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
@@ -324,7 +324,7 @@ footer {
 .ul-projects {
   display: flex;
   flex-direction: column;
-  row-gap: .5rem;
+  row-gap: 1rem;
 }
 
 .ul-projects li a {
